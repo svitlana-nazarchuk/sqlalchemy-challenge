@@ -23,11 +23,13 @@ app = Flask(__name__)
 def welcome():
     return (f"Welcome to the Home page!</br>"
             f"Available routes:</br>"
-            f"/api/v1.0/precipitation</br>"
-            f"/api/v1.0/stations</br>"
-            f"/api/v1.0/tobs</br>"
-            f"/api/v1.0/<start></br>"
-            f"/api/v1.0/<start>/<end></br>") 
+            f"/api/v1.0/precipitation  - for precipitation</br>"
+            f"/api/v1.0/stations - for the list of available stations</br>"
+            f"/api/v1.0/tobs - for the list of temperature observations (tobs) for the previous year</br>"
+            f"/api/v1.0/<start> - for the list of the minimum temperature, the average temperature, and the max temperature for a given start date, "
+            F"after / put start date in a format yyyy-mm-dd</br>"
+            f"/api/v1.0/<start>/<end> - for the list of the minimum temperature, the average temperature, and the max temperature for a given start and end dates, "
+            F"after the first/ put start date, and after the second / put the end date in a format yyyy-mm-dd</br>") 
 
 
 #Convert the query results to a Dictionary using `date` as the key and `prcp` as the value.
